@@ -25,7 +25,7 @@ const mainProjects = [
   {
     title: "My Portfolio",
     image: "/myportfoliopic.png",
-    demo: "http://localhost:5173/",
+    demo: "https://hanzala-portfolio-site.vercel.app/",
   },
   {
     title: "Elo Shopping",
@@ -87,7 +87,7 @@ export default function ProjectsSection() {
       </div>
 
       {/* Projects Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 self-center w-[85%] max-w-6xl mx-auto">
         {mainProjects.map((project, i) => (
           <motion.div
             key={i}
@@ -96,7 +96,7 @@ export default function ProjectsSection() {
             whileInView="visible"
             viewport={{ once: false, amount: 0.2 }} // 👈 animate every time
             custom={i + 2} // stagger each card
-            className="bg-[#1A1A1A] border border-gray-800 rounded-xl overflow-hidden shadow-md hover:shadow-amber-200/30 transition-transform hover:scale-105 flex flex-col"
+            className="bg-[#1A1A1A] border border-gray-800   rounded-xl overflow-hidden shadow-md hover:shadow-amber-200/30 transition-transform hover:scale-105 flex flex-col"
           >
             {/* Image */}
             <div className="relative w-full aspect-[3/2] overflow-hidden group">

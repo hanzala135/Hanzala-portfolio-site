@@ -23,7 +23,7 @@ const Services_content = ({ obj }) => {
       whileHover={{ scale: 1.05 }}
       className="bg-gradient-to-br from-[#0A0A0A] to-[#1c1c1c] 
                  rounded-2xl shadow-lg p-8 text-center max-w-sm mx-auto 
-                 border border-gray-800 hover:border-amber-300 
+                 border border-gray-800 hover:border-amber-300  w-[86%]
                  transition cursor-pointer"
     >
       {/* Icon */}

@@ -45,6 +45,7 @@ const Herosectionpart = () => {
         </motion.p>
 
         {/* Wiggle Arrow */}
+        {/* Decorative Arrow */}
         <motion.div
           initial={{ opacity: 1, rotate: 0 }}
           animate={{ rotate: [-3, 3, -3] }}
@@ -54,12 +55,12 @@ const Herosectionpart = () => {
             repeat: Infinity,
             repeatType: "loop",
           }}
-          className="flex mt-10 justify-center md:justify-start"
+          className="flex justify-center md:justify-start mt-10"
         >
           <img
             src="./curl arrow.png"
             alt="Decorative Arrow"
-            className="w-10 md:w-16 opacity-80"
+            className="w-8 sm:w-10 md:w-16 opacity-80"
           />
         </motion.div>
 
@@ -68,13 +69,13 @@ const Herosectionpart = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 1 }}
-          className="mt-2 flex flex-wrap ml-15 justify-center md:justify-start gap-6 items-center"
+          className="mt-4 flex flex-col sm:flex-row flex-wrap justify-center md:justify-start gap-4 sm:gap-6 items-center"
         >
           {/* Primary CTA */}
           <a
             href="#projects"
             aria-label="View Projects"
-            className="bg-amber-100 text-black px-8 py-3 rounded-full font-semibold hover:bg-amber-200 transition transform hover:scale-105"
+            className="bg-amber-100 text-black px-6 sm:px-8 py-3 rounded-full font-semibold hover:bg-amber-200 transition transform hover:scale-105 w-full sm:w-auto text-center"
           >
             View Projects
           </a>
@@ -83,7 +84,7 @@ const Herosectionpart = () => {
           <a
             href="#process"
             aria-label="View Work Process"
-            className="group inline-flex items-center gap-3"
+            className=" hidden md:group md:inline-flex md:items-center md:gap-3"
           >
             <span className="relative inline-grid place-items-center h-12 w-12 rounded-full border border-white/40 group-hover:scale-105 transition-transform">
               <span className="absolute inset-0 rounded-full group-hover:scale-110 transition-transform bg-white/5" />
@@ -97,8 +98,12 @@ const Herosectionpart = () => {
               </svg>
             </span>
             <span className="text-left">
-              <span className="block text-base text-neutral-400">Work</span>
-              <span className="block -mt-1 text-base font-medium">Process</span>
+              <span className="block text-sm sm:text-base text-neutral-400">
+                Work
+              </span>
+              <span className="block -mt-1 text-sm sm:text-base font-medium">
+                Process
+              </span>
             </span>
           </a>
         </motion.div>

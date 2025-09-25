@@ -33,7 +33,7 @@ const SkillSlider = ({ title, items }) => {
             x: {
               repeat: Infinity,
               repeatType: "loop",
-              duration: 30,
+              duration: 10, // ⏩ was 30, reduced for faster sliding
               ease: "linear",
             },
           }}
