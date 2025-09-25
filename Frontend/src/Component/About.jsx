@@ -1,4 +1,4 @@
-bimport React, { useState, useRef } from "react";
+import React, { useState, useRef } from "react";
 import { FiUser } from "react-icons/fi";
 import { motion, useInView } from "framer-motion";
 import MainAbout from "./MainAbout";
