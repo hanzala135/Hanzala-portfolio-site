@@ -73,7 +73,7 @@ const Herosectionpart = () => {
         >
           {/* Primary CTA */}
           <a
-            href="#projects"
+            href="#project"
             aria-label="View Projects"
             className="bg-amber-100 text-black px-6 sm:px-8 py-3 rounded-full font-semibold hover:bg-amber-200 transition transform hover:scale-105 w-full sm:w-auto text-center"
           >
