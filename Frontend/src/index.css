@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+/* Scrollbar width */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000; /* dark background */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #4a4949; /* medium gray */
+  border-radius: 9999px; /* fully rounded */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #656565; /* lighter gray */
+}
+
+/* Firefox support */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #4a4949 #000; /* thumb + track */
+}
