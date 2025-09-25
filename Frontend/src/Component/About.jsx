@@ -1,7 +1,7 @@
-import React, { useState, useRef } from "react";
+bimport React, { useState, useRef } from "react";
 import { FiUser } from "react-icons/fi";
 import { motion, useInView } from "framer-motion";
-import MainAbout from "./MainABout";
+import MainAbout from "./MainAbout";
 import Education from "./Education";
 import Experience from "./Experience";
 import Skills from "./Skill";
