@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./Component/Navbar";
 import Hero from "./Component/Hero";
-import About from "./Component/About";
+import About from "./Component/MainAbout";
 import Skills from "./Component/Skill";
 import Experience from "./Component/Experience";
 import Education from "./Component/Education";
