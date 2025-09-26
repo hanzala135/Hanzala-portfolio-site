@@ -90,42 +90,37 @@ const Navbar = () => {
           className="md:hidden text-white"
           onClick={() => setIsOpen(!isOpen)}
         >
-
           {isOpen ? <X size={28} /> : <Menu size={28} />}{" "}
         </button>{" "}
       </div>{" "}
-      {/* Mobile Menu */}{" "}
+      {/* Mobile Menu */} {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-black/95 text-white px-6 py-10 space-y-4 animate-slideDown">
-          {" "}
+        <div className="md:hidden fixed top-[80px] left-0 w-full bg-black/95 text-white px-6 py-10 space-y-4 animate-slideDown z-40">
           {sectionLinks.map((link) => (
             <button
               key={link.name}
               onClick={() => handleScroll(link.section)}
               className="block w-full text-left text-lg hover:text-amber-200 transition-colors"
             >
-              {" "}
-              {link.name}{" "}
+              {link.name}
             </button>
-          ))}{" "}
+          ))}
           <Link
             to="/contact"
             onClick={() => setIsOpen(false)}
             className="block text-lg hover:text-amber-200 transition-colors"
           >
-            {" "}
-            CONTACT{" "}
-          </Link>{" "}
+            CONTACT
+          </Link>
           <Link
             to="/contact"
             onClick={() => setIsOpen(false)}
             className="block bg-amber-200 text-black px-6 py-3 rounded-md font-semibold text-center hover:bg-amber-300 transition"
           >
-            {" "}
-            Let’s Talk →{" "}
-          </Link>{" "}
+            Let’s Talk →
+          </Link>
         </div>
-      )}{" "}
+      )}
     </nav>
   );
 };
