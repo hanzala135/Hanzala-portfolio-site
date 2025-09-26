@@ -5,6 +5,7 @@ import { motion, useInView } from "framer-motion";
 
 export default function Contact() {
   const navigate = useNavigate();
+  const currentYear = new Date().getFullYear();
   const footerRef = useRef(null);
   const isInView = useInView(footerRef, { once: false, amount: 0.4 });
 
@@ -120,18 +121,9 @@ export default function Contact() {
                    text-gray-400 gap-4 sm:gap-6"
       >
         <p className="text-center md:text-left">
-          Copyright © 2025 <span className="text-amber-200">Hanzala.</span> All
-          rights reserved.
+          Copyright © {currentYear}{" "}
+          <span className="text-amber-200">Hanzala.</span> All rights reserved.
         </p>
-
-        <div className="flex gap-4 sm:gap-6">
-          <a href="#" className="hover:text-white">
-            Terms & Condition
-          </a>
-          <a href="#" className="hover:text-white">
-            Privacy Policy
-          </a>
-        </div>
 
         {/* Scroll-to-top button */}
         <motion.button

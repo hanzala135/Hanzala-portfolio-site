@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 const Contact = () => {
   const navigate = useNavigate();
   const [status, setStatus] = useState("");
-
+  const currentYear = new Date().getFullYear();
   const handleSubmit = async (e) => {
     e.preventDefault();
     const form = e.target;
@@ -192,18 +192,9 @@ const Contact = () => {
       {/* Footer */}
       <motion.div className="flex flex-col md:flex-row justify-between items-center w-full border-t border-gray-800 mt-12 pt-6 text-xs sm:text-sm text-gray-400 gap-4 sm:gap-8 px-4">
         <p className="text-center md:text-left">
-          Copyright © 2025 <span className="text-amber-200">Hanzala.</span> All
-          rights reserved.
+          Copyright © {currentYear}
+          <span className="text-amber-200">Hanzala.</span> All rights reserved.
         </p>
-
-        <div className="flex gap-6">
-          <a href="#" className="hover:text-white">
-            Terms & Condition
-          </a>
-          <a href="#" className="hover:text-white">
-            Privacy Policy
-          </a>
-        </div>
 
         {/* Scroll-to-top button */}
         <motion.button
