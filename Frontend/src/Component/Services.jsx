@@ -2,13 +2,8 @@ import React, { useRef } from "react";
 import { CiMail } from "react-icons/ci";
 import { motion, useInView } from "framer-motion";
 import { Laptop, Cloud, Palette, Search } from "lucide-react";
-import { FaWordpress } from "react-icons/fa";
-import Services_content from "./Services_content";
-import SkillSlider from "./SkillSlider";
-import { Link } from "react-router-dom";
-
-// Tech stack icons
 import {
+  FaWordpress,
   FaReact,
   FaHtml5,
   FaCss3Alt,
@@ -22,12 +17,15 @@ import {
   SiTailwindcss,
   SiMongodb,
   SiMysql,
-  SiOracle,
-  SiAdobephotoshop,
+  SiPostgresql,
   SiCanva,
   SiExpress,
   SiNextdotjs,
 } from "react-icons/si";
+
+import Services_content from "./Services_content";
+import SkillSlider from "./SkillSlider";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   const introRef = useRef(null);
@@ -47,9 +45,7 @@ const Services = () => {
   return (
     <div
       id="services"
-      className="text-white bg-[#0A0A0A] max-w-[2000px] 
-                 px-3 sm:px-4 md:px-6 py-10 sm:py-14 md:py-16 
-                 flex flex-col justify-center gap-14 sm:gap-16 md:gap-20"
+      className="text-white bg-[#0A0A0A] max-w-[2000px] px-3 sm:px-4 md:px-6 py-10 sm:py-14 md:py-16 flex flex-col justify-center gap-14 sm:gap-16 md:gap-20"
     >
       {/* ================= Intro Section ================= */}
       <motion.div
@@ -60,21 +56,16 @@ const Services = () => {
         className="w-[80%] lg:w-[70%] mx-auto flex flex-col"
       >
         <motion.h1
-          className="text-3xl sm:text-4xl lg:text-6xl font-bold 
-                     pb-4 sm:pb-6 relative group cursor-pointer leading-snug"
+          className="text-3xl sm:text-4xl lg:text-6xl font-bold pb-4 sm:pb-6 relative group cursor-pointer leading-snug"
           whileHover={{ scale: 1.05 }}
           transition={{ type: "spring", stiffness: 200 }}
         >
           We provide cutting-edge digital solutions!
-          <span
-            className="absolute bottom-0 left-0 w-0 h-[3px] bg-amber-200 
-                           transition-all duration-500 group-hover:w-full"
-          ></span>
+          <span className="absolute bottom-0 left-0 w-0 h-[3px] bg-amber-200 transition-all duration-500 group-hover:w-full"></span>
         </motion.h1>
 
         <motion.p
-          className="text-sm sm:text-base md:text-lg lg:text-[20px] 
-                     text-[#B2B2B2] w-full md:w-[80%] pt-4 sm:pt-6"
+          className="text-sm sm:text-base md:text-lg lg:text-[20px] text-[#B2B2B2] w-full md:w-[80%] pt-4 sm:pt-6"
           initial={{ opacity: 0, x: -50 }}
           animate={introInView ? { opacity: 1, x: 0 } : {}}
           transition={{ delay: 0.3, duration: 0.7 }}
@@ -85,8 +76,7 @@ const Services = () => {
         </motion.p>
 
         <motion.p
-          className="text-sm sm:text-base md:text-lg lg:text-[20px] 
-                     text-[#B2B2B2] w-full md:w-[80%] pt-4 sm:pt-6"
+          className="text-sm sm:text-base md:text-lg lg:text-[20px] text-[#B2B2B2] w-full md:w-[80%] pt-4 sm:pt-6"
           initial={{ opacity: 0, x: 50 }}
           animate={introInView ? { opacity: 1, x: 0 } : {}}
           transition={{ delay: 0.6, duration: 0.7 }}
@@ -104,10 +94,7 @@ const Services = () => {
         >
           <Link to="/contact" className="w-full sm:w-auto">
             <motion.button
-              className="bg-amber-200 text-black px-4 py-2 sm:px-6 sm:py-3 
-                         rounded-md font-semibold text-center w-full 
-                         hover:bg-amber-300 transition cursor-pointer 
-                         text-sm sm:text-base"
+              className="bg-amber-200 text-black px-4 py-2 sm:px-6 sm:py-3 rounded-md font-semibold text-center w-full hover:bg-amber-300 transition cursor-pointer text-sm sm:text-base"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -116,12 +103,7 @@ const Services = () => {
           </Link>
 
           <motion.button
-            className="bg-amber-200 text-black px-4 py-2 sm:px-6 sm:py-3 
-                       rounded-md font-semibold text-center w-full 
-                       sm:w-[50%] md:w-[35%] lg:w-[25%] 
-                       hover:bg-amber-300 transition cursor-pointer 
-                       flex items-center justify-center 
-                       text-sm sm:text-base"
+            className="bg-amber-200 text-black px-4 py-2 sm:px-6 sm:py-3 rounded-md font-semibold text-center w-full sm:w-[50%] md:w-[35%] lg:w-[25%] hover:bg-amber-300 transition cursor-pointer flex items-center justify-center text-sm sm:text-base"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -131,11 +113,7 @@ const Services = () => {
       </motion.div>
 
       {/* ================= Service Cards ================= */}
-      <div
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 
-                   gap-4 sm:gap-6 lg:gap-8 
-                   w-full md:w-[85%] lg:w-[70%] mx-auto"
-      >
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 w-full md:w-[85%] lg:w-[70%] mx-auto">
         {[
           {
             symbol: Laptop,
@@ -183,26 +161,25 @@ const Services = () => {
 
       {/* ================= Technology Slider ================= */}
       <SkillSlider
-        title="Our Technology"
-        items={[
-          { name: "React", icon: FaReact, color: "#61DAFB" },
-          { name: "HTML5", icon: FaHtml5, color: "#E34F26" },
-          { name: "CSS3", icon: FaCss3Alt, color: "#1572B6" },
-          { name: "JavaScript", icon: FaJs, color: "#F7DF1E" },
-          { name: "Node.js", icon: FaNodeJs, color: "#339933" },
-          { name: "PHP", icon: FaPhp, color: "#777BB4" },
-          { name: "Figma", icon: FaFigma, color: "#F24E1E" },
-          { name: "Database", icon: FaDatabase, color: "#4DB33D" },
-          { name: "Tailwind CSS", icon: SiTailwindcss, color: "#38B2AC" },
-          { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
-          { name: "MySQL", icon: SiMysql, color: "#4479A1" },
-          { name: "Oracle", icon: SiOracle, color: "#F80000" },
-          { name: "Photoshop", icon: SiAdobephotoshop, color: "#31A8FF" },
-          { name: "Canva", icon: SiCanva, color: "#00C4CC" },
-          { name: "Express.js", icon: SiExpress, color: "#444444" },
-          { name: "Next.js", icon: SiNextdotjs, color: "#000000" },
-        ]}
-      />
+  title="Our Technology"
+  items={[
+    { name: "React", icon: FaReact, color: "#61DAFB" },
+    { name: "HTML5", icon: FaHtml5, color: "#E34F26" },
+    { name: "CSS3", icon: FaCss3Alt, color: "#1572B6" },
+    { name: "JavaScript", icon: FaJs, color: "#F7DF1E" },
+    { name: "Node.js", icon: FaNodeJs, color: "#339933" },
+    { name: "PHP", icon: FaPhp, color: "#777BB4" },
+    { name: "Figma", icon: FaFigma, color: "#F24E1E" },
+    { name: "Database", icon: FaDatabase, color: "#4DB33D" },
+    { name: "Tailwind CSS", icon: SiTailwindcss, color: "#38B2AC" },
+    { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
+    { name: "MySQL", icon: SiMysql, color: "#4479A1" },
+    { name: "PostgreSQL", icon: SiPostgresql, color: "#336791" },
+    { name: "Canva", icon: SiCanva, color: "#00C4CC" },
+    { name: "Express.js", icon: SiExpress, color: "#444444" },
+    { name: "Next.js", icon: SiNextdotjs, color: "#000000" },
+  ]}
+/>
     </div>
   );
 };

@@ -11,20 +11,25 @@ import {
   FaWordpress,
   FaFigma,
   FaDatabase,
+  FaCode,
+  FaPaintBrush,
 } from "react-icons/fa";
+
 import {
   SiTailwindcss,
   SiMongodb,
   SiMysql,
-  SiOracle,
-  SiAdobephotoshop,
+  SiC,
+  SiCplusplus,
+  SiPython,
+  SiJavascript,
+  SiDotnet,
   SiCanva,
   SiExpress,
   SiNextdotjs,
-} from "react-icons/si";
+} from "react-icons/si"; // replace non-existent icons
 
 const Skills = () => {
-  // ✅ Helper slider component
   const SkillSlider = ({ title, items }) => (
     <div className="flex flex-col items-center mb-4 sm:mb-6">
       <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-2 sm:mb-3">
@@ -59,7 +64,6 @@ const Skills = () => {
     </div>
   );
 
-  // ✅ Animation hook
   const ref = useRef(null);
   const isInView = useInView(ref, { margin: "-80px", once: false });
 
@@ -75,7 +79,6 @@ const Skills = () => {
       ref={ref}
       className="w-[95%] sm:w-[90%] md:w-[85%] flex flex-col justify-center items-center mx-auto p-4 sm:p-6 md:p-10 bg-gradient-to-br from-[#1c1b1a] to-[#111010] border rounded-xl mt-10 sm:mt-12 mb-10 sm:mb-12"
     >
-      {/* Heading + Intro */}
       <motion.div
         {...animation}
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
@@ -92,16 +95,31 @@ const Skills = () => {
           <br />
           <br />
           <p className="text-sm sm:text-base md:text-lg text-gray-300 mt-2 sm:mt-4 leading-relaxed">
-            I am confident in my ability to deliver end-to-end web solutions,
-            combining strong frontend expertise, efficient backend development,
-            and reliable database management. With additional skills in
-            WordPress and UI/UX design, I create digital experiences that are
-            both functional and visually engaging.
+            I deliver end-to-end web solutions combining frontend expertise,
+            backend development, and database management. I also create
+            functional and visually engaging designs with WordPress and UI/UX
+            skills.
           </p>
         </motion.div>
 
-        {/* ✅ Sliders */}
         <section className="bg-[#191818] mt-4 sm:mt-6 border border-gray-800 rounded-2xl text-white w-full sm:w-[90%] md:w-[80%] self-center py-4 sm:py-6 space-y-4 sm:space-y-6 shadow-md">
+          <SkillSlider
+            title="Languages"
+            items={[
+              { name: "C", icon: <SiC className="text-blue-400" /> },
+              { name: "C++", icon: <SiCplusplus className="text-blue-500" /> },
+              { name: "C#", icon: <FaCode className="text-purple-500" /> },
+              {
+                name: "JavaScript",
+                icon: <SiJavascript className="text-yellow-400" />,
+              },
+              {
+                name: "Python",
+                icon: <SiPython className="text-yellow-500" />,
+              },
+            ]}
+          />
+
           <SkillSlider
             title="Frontend"
             items={[
@@ -131,6 +149,11 @@ const Skills = () => {
                 icon: <SiExpress className="text-gray-300" />,
               },
               { name: "Next.js", icon: <SiNextdotjs className="text-white" /> },
+              { name: ".NET", icon: <SiDotnet className="text-purple-500" /> },
+              {
+                name: "Python",
+                icon: <SiPython className="text-yellow-500" />,
+              },
             ]}
           />
 
@@ -142,7 +165,6 @@ const Skills = () => {
                 icon: <SiMongodb className="text-green-500" />,
               },
               { name: "MySQL", icon: <SiMysql className="text-blue-500" /> },
-              { name: "Oracle", icon: <SiOracle className="text-red-600" /> },
               {
                 name: "Database",
                 icon: <FaDatabase className="text-gray-400" />,
@@ -154,10 +176,7 @@ const Skills = () => {
             title="UI & UX Design"
             items={[
               { name: "Figma", icon: <FaFigma className="text-pink-500" /> },
-              {
-                name: "Photoshop",
-                icon: <SiAdobephotoshop className="text-blue-400" />,
-              },
+
               { name: "Canva", icon: <SiCanva className="text-blue-400" /> },
             ]}
           />
