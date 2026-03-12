@@ -1,6 +1,7 @@
 import React from "react";
 import { FaInstagram, FaLinkedin, FaGlobe, FaGithub } from "react-icons/fa";
 import Herosectionpart from "./Herosectionpart.jsx";
+import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
@@ -27,17 +28,31 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Middle (Hero content) */}
           <div className="w-full md:w-[50%]">
             <Herosectionpart />
           </div>
 
-          {/* Empty Right Spacer */}
-          <div className="hidden md:block w-[40%]">
-            <img src="" alt="" />
+          <div className="flex-1 flex items-center justify-center px-4 lg:px-0 h-full md:w-[40%]">
+            <motion.img
+              src="./AdobeExpressfile.png"
+              alt="Hero Illustration"
+              className="w-[150px] sm:w-[240px] md:w-[260px] lg:w-[320px] xl:w-[360px] 
+    object-contain rounded-xl "
+              initial={{ opacity: 0, scale: 0.7, y: 50 }}
+              animate={{ opacity: 1, scale: 1, y: [0, -14, 0] }}
+              whileHover={{ scale: 1.08, rotate: 2 }}
+              transition={{
+                opacity: { duration: 1 },
+                scale: { duration: 0.8 },
+                y: {
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                },
+              }}
+            />
           </div>
 
-          {/* Right Side (Social Links) - only on md+ */}
           <div className="hidden md:flex right-0 flex-col items-center text-white w-[5%]">
             <div className="flex flex-col items-center">
               <p className="text-sm font-bold text-[#c1bbbb] tracking-widest mb-2 [writing-mode:vertical-rl] rotate-180">

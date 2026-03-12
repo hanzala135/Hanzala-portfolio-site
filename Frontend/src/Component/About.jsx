@@ -53,19 +53,20 @@ const About = () => {
           />
         </motion.div>
 
-        {/* About Text */}
         <motion.div className="w-[90%] sm:w-[80%] mb-6 sm:mb-10">
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed text-gray-300">
             I’m{" "}
             <span className="text-amber-200 font-semibold">Hanzala Rashid</span>
-            , a passionate <span className="font-semibold">MERN Stack</span> and
+            , a passionate
+            <span className="font-semibold"> MERN Stack</span>,
+            <span className="font-semibold"> .NET developer</span>, and
             <span className="font-semibold"> WordPress developer</span> focused
             on building scalable, user-friendly, and high-performing web
             solutions.
           </p>
         </motion.div>
 
-        {/* Tabs */}
+   
         <motion.div
           variants={item}
           className="flex justify-center items-center text-center flex-wrap gap-3 sm:gap-4"

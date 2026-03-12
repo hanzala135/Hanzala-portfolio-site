@@ -49,7 +49,7 @@ export default function Contact() {
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 leading-relaxed">
             Hello, I’m{" "}
             <span className="text-amber-200 font-semibold">Hanzala Rashid</span>
-            , MERN Stack & WordPress Developer based in Pakistan.
+            , MERN Stack , .Net & WordPress Developer based in Pakistan.
           </p>
           <a
             href="mailto:hanzalarashid135@gmail.com"
