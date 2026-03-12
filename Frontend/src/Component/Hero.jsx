@@ -32,12 +32,11 @@ export default function Hero() {
             <Herosectionpart />
           </div>
 
-          <div className="flex-1 flex items-center justify-center px-4 lg:px-0 h-full md:w-[40%]">
+          <div className="hidden md:flex flex-1 items-center justify-center px-4 lg:px-0 h-full md:w-[40%]">
             <motion.img
               src="./AdobeExpressfile.png"
               alt="Hero Illustration"
-              className="w-[150px] sm:w-[240px] md:w-[260px] lg:w-[320px] xl:w-[360px] 
-    object-contain rounded-xl "
+              className="w-[150px] sm:w-[240px] md:w-[260px] lg:w-[320px] xl:w-[360px] object-contain rounded-xl"
               initial={{ opacity: 0, scale: 0.7, y: 50 }}
               animate={{ opacity: 1, scale: 1, y: [0, -14, 0] }}
               whileHover={{ scale: 1.08, rotate: 2 }}
