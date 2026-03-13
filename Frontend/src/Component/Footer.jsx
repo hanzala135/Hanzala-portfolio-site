@@ -76,7 +76,7 @@ export default function Contact() {
           {[
             {
               name: "Linkedin",
-              link: "www.linkedin.com/in/hanzala-rashid-76b9252a8",
+              link: "https://www.linkedin.com/in/hanzala-rashid-76b9252a8",
             },
             {
               name: "Instagram",
