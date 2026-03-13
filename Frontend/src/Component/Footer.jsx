@@ -80,7 +80,7 @@ export default function Contact() {
             },
             {
               name: "Instagram",
-              link: "https://www.instagram.com/hanzala_135/",
+              link: "https://www.instagram.com/hanzala_siddiqi/",
             },
             { name: "Github", link: "https://github.com/hanzala135" },
           ].map((item, index) => (

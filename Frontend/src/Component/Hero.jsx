@@ -61,7 +61,7 @@ export default function Hero() {
 
               <div className="flex flex-col space-y-4 pt-20 items-center">
                 <a
-                  href="https://www.instagram.com/hanzala_135/"
+                  href="https://www.instagram.com/hanzala_siddiqi/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[#c1bbbb] border border-[#656262] bg-[#2c2b2b] rounded-full p-3 hover:text-amber-100"
